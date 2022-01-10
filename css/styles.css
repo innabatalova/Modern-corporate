@@ -339,10 +339,20 @@ template {
 
 * {
   box-sizing: border-box;
+  font-family: Poppins;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .container {
-  width: 70rem;
+  width: 75rem;
   margin: auto;
 }
 
@@ -353,7 +363,7 @@ template {
   background-color: black;
   color: white;
   overflow: hidden;
-  z-index: -1;
+  z-index: 5;
 }
 
 .header::after {
@@ -365,7 +375,6 @@ template {
   filter: blur(200px);
   bottom: -72%;
   left: -15%;
-  z-index: -1;
 }
 
 .header::before {
@@ -378,11 +387,13 @@ template {
   left: -25%;
   top: 15%;
   border-radius: 50%;
-  z-index: -1;
 }
 
 .header-top {
   position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 170px auto 160px;
 }
 
 .header-top::after {
@@ -395,7 +406,6 @@ template {
   transform: matrix(1, 0, 0, -1, 0, 0);
   top: -70%;
   right: -20%;
-  z-index: -1;
 }
 
 .header-top::before {
@@ -408,7 +418,40 @@ template {
   top: 25%;
   right: -25%;
   border-radius: 50%;
-  z-index: -1;
+}
+
+.header-top__logo {
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 46px;
+}
+
+.header-top__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 70px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.header-top__list__item {
+  margin-right: 50px;
+}
+
+.header-top__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: inherit;
+  color: white;
+  padding: 14px 30px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  max-width: 165px;
+  max-height: 63px;
+  z-index: 5;
 }
 
 .header-main {

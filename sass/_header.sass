@@ -5,7 +5,7 @@
   background-color: black
   color: white
   overflow: hidden
-  z-index: -1
+  z-index: 5
 
   &::after
     position: absolute
@@ -16,7 +16,6 @@
     filter: blur(200px)
     bottom: -72%
     left: -15%
-    z-index: -1
 
   &::before
     position: absolute
@@ -28,10 +27,12 @@
     left: -25%
     top: 15%
     border-radius: 50%
-    z-index: -1
 
   &-top
     position: relative
+    display: grid
+    align-items: center
+    grid-template-columns: 170px auto 160px
 
     &::after
       position: absolute
@@ -43,7 +44,6 @@
       transform: matrix(1, 0, 0, -1, 0, 0)
       top: -70%
       right: -20%
-      z-index: -1
 
     &::before
       position: absolute
@@ -55,7 +55,36 @@
       top: 25%
       right: -25%
       border-radius: 50%
-      z-index: -1
+
+    &__logo
+      font-weight: 600
+      font-size: 31px
+      line-height: 46px
+
+    &__list
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      margin-right: 70px
+      font-weight: normal
+      font-size: 16px
+      line-height: 24px
+
+      &__item
+        margin-right: 50px
+
+    &__button
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      background-color: inherit
+      color: white
+      padding: 14px 30px
+      border: 1px solid #FFFFFF
+      border-radius: 5px
+      max-width: 165px
+      max-height: 63px
+      z-index: 5
 
   &-main
     position: relative
