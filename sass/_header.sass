@@ -1,0 +1,86 @@
+.header
+  position: relative
+  padding-top: 55px
+  padding-bottom: 225px
+  background-color: black
+  color: white
+  overflow: hidden
+  z-index: -1
+
+  &::after
+    position: absolute
+    content: ""
+    width: 400px
+    height: 560px
+    background: linear-gradient(180deg, rgba(24, 75, 255, 0) 0%, #174AFF 100%)
+    filter: blur(200px)
+    bottom: -72%
+    left: -15%
+    z-index: -1
+
+  &::before
+    position: absolute
+    content: ""
+    width: 800px
+    height: 800px
+    background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #FF29C3 100%)
+    filter: blur(200px)
+    left: -25%
+    top: 15%
+    border-radius: 50%
+    z-index: -1
+
+  &-top
+    position: relative
+
+    &::after
+      position: absolute
+      content: ""
+      width: 600px
+      height: 900px
+      background: linear-gradient(180deg, rgba(24, 75, 255, 0) 0%, #174AFF 100%)
+      filter: blur(200px)
+      transform: matrix(1, 0, 0, -1, 0, 0)
+      top: -70%
+      right: -20%
+      z-index: -1
+
+    &::before
+      position: absolute
+      content: ""
+      width: 900px
+      height: 900px
+      background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #FF29C3 100%)
+      filter: blur(400px)
+      top: 25%
+      right: -25%
+      border-radius: 50%
+      z-index: -1
+
+  &-main
+    position: relative
+
+    &::after
+      position: absolute
+      content: ""
+      width: 550px
+      height: 800px
+      background: linear-gradient(180deg, rgba(24, 75, 255, 0) 0%, #174AFF 100%)
+      filter: blur(200px)
+      transform: matrix(1, 0, 0, -1, 0, 0)
+      top: -350%
+      left: -10%
+      z-index: -1
+
+    &::before
+      position: absolute
+      content: ""
+      width: 950px
+      height: 950px
+      background: linear-gradient(180deg, rgba(54, 219, 255, 0) 0%, #FF29C3 100%)
+      filter: blur(400px)
+      transform: matrix(1, 0, 0, -1, 0, 0)
+      top: -300%
+      left: -18%
+      border-radius: 50%
+      z-index: -1
