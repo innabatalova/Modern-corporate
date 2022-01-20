@@ -343,6 +343,11 @@ template {
   font-style: normal;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 ul {
   list-style-type: none;
 }
@@ -427,6 +432,7 @@ button {
 }
 
 .header-top__list {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -434,10 +440,16 @@ button {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
+  z-index: 2;
 }
 
 .header-top__list__item {
   margin-right: 50px;
+  color: #fff;
+}
+
+.header-top__list__item:hover, .header-top__list__item:focus {
+  color: #9274c7;
 }
 
 .header-top__button {
@@ -454,8 +466,16 @@ button {
   z-index: 5;
 }
 
+.header-top__button:hover, .header-top__button:focus {
+  color: #9274c7;
+  border: 1px solid #b6a1da;
+  box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.25);
+}
+
 .header-main {
   position: relative;
+  display: grid;
+  grid-template-columns: 60%;
 }
 
 .header-main::after {
@@ -483,5 +503,79 @@ button {
   left: -18%;
   border-radius: 50%;
   z-index: -1;
+}
+
+.header-main__title {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  margin-bottom: 25px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+}
+
+.header-main__text {
+  grid-column: 1 / 1;
+  grid-row: 2 / 2;
+  margin-top: 0;
+  margin-bottom: 55px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.header-main__search {
+  align-self: start;
+  grid-column: 1 / 1;
+  grid-row: 3 / 3;
+  width: 350px;
+  height: 55px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  padding: 19px 25px 15px 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.header-main__search::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.header-main__button {
+  align-self: end;
+  grid-column: 1 / 1;
+  grid-row: 3 / 3;
+  max-width: 165px;
+  height: 55px;
+  padding: 14px 33px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #303030;
+  background: #FFCF59;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.header-main__button:hover, .header-main__button:focus {
+  color: #625959;
+  background: #d5ad49;
+}
+
+.header-main__info {
+  grid-column: 1 / 1;
+  grid-row: 4 / 4;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
 }
 /*# sourceMappingURL=styles.css.map */
